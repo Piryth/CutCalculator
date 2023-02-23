@@ -12,7 +12,7 @@ class Profil {
         this._mgBase = mgBase;
         this._mbObj = mgObj;
         this._perteHebdo = perteHebdo;
-        console.log("Je suis crée");
+        // console.log(this);
     }
 
 
