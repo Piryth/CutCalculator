@@ -1,20 +1,22 @@
 import { useState } from "react";
 import Form from './Form';
-import Profil from "../model/Profil";
 import Result from "./Result";
-
+import Profil from "../model/Profil";
+import '../style/App.scss'
 
 function App() {
+
   const[profil, updateProfil] = useState(new Profil());
-  const[isResult, updateIsResult] = useState(false);
 
 
-  return (
+    return (
     <div className="App">
       <header className="App-header">
-        <h1 id='title'>Calculatrice de sèche</h1>
-        <Form profil={profil} updateProfil={updateProfil} isResult={isResult} updateIsResult={updateIsResult}/>
-        <Result profil={profil} updateProfil={updateProfil} isResult={isResult} updateIsResult={updateIsResult}></Result>
+          <div className="Form-section">
+              <h1 id='title'>Calculatrice de sèche</h1>
+              <Form profil={profil} updateProfil={updateProfil}/>
+          </div>
+          <Result profil={profil} updateProfil={updateProfil}/>
       </header>
     </div>
   );

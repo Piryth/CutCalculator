@@ -1,0 +1,26 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 6vh;
+    width: 45vw;
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 30%;
+        border: none;
+        border-radius: 3px;
+        height: 7vh;
+        background-color: #06BCC1;
+        font-weight: 600;
+        align-self: end;
+    }
+}
+
+label {
+    display: block;
+}
+
