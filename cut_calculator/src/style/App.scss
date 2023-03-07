@@ -1,5 +1,45 @@
 .App-header {
-  display: flex;
-  justify-content: flex-start;
-  gap: 8vw;
+  padding: 2vh;
+  margin: 0;
+  background-color: #D8D4F2;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+
+}
+
+.App-main {
+  display: grid;
+  grid-template-columns: 33vw 66vw;
+
+  .Form-section {
+
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .Result-section {
+
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: 5vw;
+  }
+
+  .Message-explaination {
+
+    align-self: flex-end;
+    color: #62466B;
+    font-size: smaller;
+    transition: 0.2s ease;
+
+
+    &:hover {
+      color:black;
+      transition: 0.2s ease;
+    }
+
+  }
+
 }

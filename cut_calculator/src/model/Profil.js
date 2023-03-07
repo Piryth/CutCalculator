@@ -34,12 +34,20 @@ class Profil {
         return (((mgKg- 0.8 - (4/5)* this._perteHebdo *(n-1))) / this.getPoidsAfter(n))*100
     }
 
+    //Simule une période de sèche. A chaque semaine, le nouveau poids et la nouvelle masse grasse
+    //est calculée, et enregistrée
     simulate() {
+        //Données
+        let dataPoids = []
+        let dataMg = []
+
         let poids = this._poidsDeBase;
         let mg = this._mgBase;
         let i = 0;
         while(mg > this._mgObjectif) {
-            console.log(mg);
+
+            dataPoids.push({x:poids, semaine: i })
+            dataMg.push({x: mg, semaine: i});
             poids = this.getPoidsAfter(i);
             mg = this.getMGAfter(i);
             i++;
@@ -47,13 +55,19 @@ class Profil {
         return {
             poids: poids,
             mg: mg,
-            nbSemaines: i
+            nbSemaines: i,
+            dataPoids: dataPoids,
+            dataMg: dataMg
         };
 
     }
 
     get isResult() {
         return this._isResult;
+    }
+
+    set isResult(isResult) {
+        this._isResult = isResult;
     }
 }
 module.exports = Profil
